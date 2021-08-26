@@ -48,16 +48,16 @@ const starts = async (client = new WAConnection()) => {
   client.on("group-update", async (anu) => {
     metdata = await client.groupMetadata(anu.jid);
     if (anu.announce == "false") {
-      teks = `- [ Group Opened ] -\n\n_Group telah dibuka oleh admin_\n_Sekarang semua member bisa mengirim pesan_`;
+      teks = `- [ Group Opened ] -\n\n_El grupo ha sido abierto por el administrador._\n_Ahora todos los miembros pueden enviar mensajes_`;
       client.sendMessage(metdata.id, teks, MessageType.text);
       console.log(`- [ Group Opened ] - In ${metdata.subject}`);
     } else if (anu.announce == "true") {
-      teks = `- [ Group Closed ] -\n\n_Group telah ditutup oleh admin_\n_Sekarang hanya admin yang dapat mengirim pesan_`;
+      teks = `- [ Group Closed ] -\n\n_El grupo ha sido cerrado por el administrador._\n_Ahora solo los administradores pueden enviar mensajes_`;
       client.sendMessage(metdata.id, teks, MessageType.text);
       console.log(`- [ Group Closed ] - In ${metdata.subject}`);
     } else if (!anu.desc == "") {
       tag = anu.descOwner.split("@")[0] + "@s.whatsapp.net";
-      teks = `- [ Group Description Change ] -\n\nDeskripsi Group telah diubah oleh Admin @${
+      teks = `- [ Group Description Change ] -\n\nEl administrador ha cambiado la descripción del grupo @${
         anu.descOwner.split("@")[0]
       }\n� Deskripsi Baru : ${anu.desc}`;
       client.sendMessage(metdata.id, teks, MessageType.text, {
@@ -65,11 +65,11 @@ const starts = async (client = new WAConnection()) => {
       });
       console.log(`- [ Group Description Change ] - In ${metdata.subject}`);
     } else if (anu.restrict == "false") {
-      teks = `- [ Group Setting Change ] -\n\nEdit Group info telah dibuka untuk member\nSekarang semua member dapat mengedit info Group Ini`;
+      teks = `- [ Group Setting Change ] -\n\nSe ha abierto la opción Editar información del grupo para los miembros\nAhora todos los miembros pueden editar la información de este grupo`;
       client.sendMessage(metdata.id, teks, MessageType.text);
       console.log(`- [ Group Setting Change ] - In ${metdata.subject}`);
     } else if (anu.restrict == "true") {
-      teks = `- [ Group Setting Change ] -\n\nEdit Group info telah ditutup untuk member\nSekarang hanya admin group yang dapat mengedit info Group Ini`;
+      teks = `- [ Group Setting Change ] -\n\nEdit La información del grupo se ha cerrado para los miembros\nAhora solo los administradores del grupo pueden editar esta información del grupo`;
       client.sendMessage(metdata.id, teks, MessageType.text);
       console.log(`- [ Group Setting Change ] - In ${metdata.subject}`);
     }
@@ -104,7 +104,7 @@ const starts = async (client = new WAConnection()) => {
         let v = client.contacts[num] || { notify: num.replace(/@.+/, "") };
         anu_user = v.vname || v.notify || num.split("@")[0];
         time_wel = moment.tz("Asia/Jakarta").format("HH:mm");
-        teks = `Halo ${anu_user} \n\nNama : \nUmur :\nGender : \nAsal :\n\nSemoga Betah dan jangan lupa isi\nAnd Following Rules Group`;
+        teks = `Halo ${anu_user} \n\nNama : \nUmur :\nGender : \nAsal :\n\nBuena suerte y no olvide completar\nY el grupo de reglas siguientes`;
         buff = await getBuffer(
           `http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${
             groupMembers.length
