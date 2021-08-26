@@ -73,7 +73,7 @@ banChats = true;
 offline = false;
 targetpc = "51917012705";
 owner = "51917012705";
-fake = "YOGIPW";
+fake = "kiwi";
 thumb = fs.readFileSync("./stik/thumb.jpeg");
 numbernye = "0";
 waktu = "-";
@@ -1173,23 +1173,23 @@ ${readmore}
         }
         break;
       case "antihidetag":
-        if (!isGroup) return reply("Khusus di grup");
-        if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
+        if (!isGroup) return reply("Solo en grupos");
+        if (!isGroupAdmins && !mek.key.fromMe) return reply("Solo administrador");
         if (args[0] == "on") {
-          if (isAntihidetag) return reply("Sudah aktif!!");
+          if (isAntihidetag) return reply("¡Activado!!");
           antihidetg.push(from);
           fs.writeFileSync(
             "./database/antihidetag.json",
             JSON.stringify(antihidetg)
           );
-          reply("Sukses mengaktifkan antihidetag!");
+          reply("Activar antihidetag con éxito!");
         } else if (args[0] == "off") {
           antihidetg.splice(from, 1);
           fs.writeFileSync(
             "./database/antihidetag.json",
             JSON.stringify(antihidetg)
           );
-          reply("Sukses mematikan antihidetag!");
+          reply("Desactivar antihidetag con éxito!");
         } else if (!q) {
           sendButMessage(
             from,
@@ -1216,21 +1216,21 @@ ${readmore}
         break;
       case "antiviewonce":
         if (!isGroup) return reply("Khusus di grup");
-        if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
+        if (!isGroupAdmins && !mek.key.fromMe) return reply("Solo administrador");
         if (args[0] == "on") {
-          if (isAntiviewonce) return reply("Sudah aktif!!");
+          if (isAntiviewonce) return reply("Activado!!");
           antivo.push(from);
           fs.writeFileSync("./database/antivo.json", JSON.stringify(antivo));
-          reply("Sukses mengaktifkan antiviewonce!");
+          reply("Activar con éxito antiviewonce!");
         } else if (args[0] == "off") {
           antivo.splice(from, 1);
           fs.writeFileSync("./database/antivo.json", JSON.stringify(antivo));
-          reply("Sukses mematikan antiviewonce!");
+          reply("¡Apague con éxito el antiviewonce!");
         } else if (!q) {
           sendButMessage(
             from,
             `MODE ANTIVIEWONCE`,
-            `Silahkan pilih salah satu`,
+            `Por favor elige uno`,
             [
               {
                 buttonId: `${prefix}antiviewonce on`,
@@ -1252,17 +1252,17 @@ ${readmore}
         break;
 
       case "autojoin":
-        if (!isGroup) return reply("Khusus di grup");
-        if (!mek.key.fromMe) return reply("Khusus owner");
+        if (!isGroup) return reply("Solo en grupos");
+        if (!mek.key.fromMe) return reply("Dueño especial");
         if (args[0] == "on") {
           if (autojoin == true) return reply("Sudah aktif!!");
           autojoin = true;
-          reply("Sukses mengaktifkan autojoin!");
+          reply("Activar la unión automática con éxito!");
         } else if (args[0] == "off") {
           autojoin = false;
-          reply("Sukses mematikan autojoin!");
+          reply("Desactivar la unión automática con éxito!");
         } else if (!q) {
-          sendButMessage(from, `MODE AUTOJOIN`, `Silahkan pilih salah satu`, [
+          sendButMessage(from, `MODE AUTOJOIN`, `Por favor elige uno`, [
             {
               buttonId: `${prefix}autojoin on`,
               buttonText: {
@@ -1281,22 +1281,22 @@ ${readmore}
         }
         break;
       case "antivirtex":
-        if (!isGroup) return reply("Khusus di grup");
-        if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
+        if (!isGroup) return reply("Solo en grupos");
+        if (!isGroupAdmins && !mek.key.fromMe) return reply("Solo administrador");
         if (args[0] == "on") {
-          if (isAntivirtex) return reply("Sudah aktif!!");
+          if (isAntivirtex) return reply("Activado!!");
           antivirtex.push(from);
           fs.writeFileSync(
             "./database/antivirtex.json",
             JSON.stringify(antivirtex)
           );
-          reply("Sukses mengaktifkan antivirtex!");
+          reply("Activar antivirus con éxito!");
         } else if (args[0] == "off") {
           antivirtex.splice(from, 1);
           fs.writeFileSync("./database/antivirtex.json", JSON.stringify(ant));
-          reply("Sukses mematikan antivirtex!");
+          reply("Desactivar el antivirus con éxito!");
         } else if (!q) {
-          sendButMessage(from, `MODE ANTIVIRTEX`, `Silahkan pilih salah satu`, [
+          sendButMessage(from, `MODE ANTIVIRTEX`, `Por favor elige uno`, [
             {
               buttonId: `${prefix}antivirtex on`,
               buttonText: {
@@ -1315,25 +1315,25 @@ ${readmore}
         }
         break;
       case "kickarea":
-        if (!isGroup) return reply("Khusus di grup");
-        if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
+        if (!isGroup) return reply("Solo en grupos");
+        if (!isGroupAdmins && !mek.key.fromMe) return reply("Solo administrador");
         if (args[0] == "on") {
-          if (isKickarea) return reply("Sudah aktif!!");
+          if (isKickarea) return reply("¡Activado!!");
           kickarea.push(from);
           fs.writeFileSync(
             "./database/antibule.json",
             JSON.stringify(kickarea)
           );
-          reply("Sukses mengaktifkan kickarea!");
+          reply("Activar kickarea con éxito!");
         } else if (args[0] == "off") {
           kickarea.splice(from, 1);
           fs.writeFileSync(
             "./database/antibule.json",
             JSON.stringify(kickarea)
           );
-          reply("Sukses mematikan kickarea!");
+          reply("¡Cerrando con éxito kickarea!");
         } else if (!q) {
-          sendButMessage(from, `MODE KICKAREA`, `Silahkan pilih salah satu`, [
+          sendButMessage(from, `MODE KICKAREA`, `Por favor elige uno`, [
             {
               buttonId: `${prefix}kickarea on`,
               buttonText: {
@@ -1471,11 +1471,11 @@ ${members > 1 ? `${members - reads.length - deliveries.length} tersisa` : ""}
         reply(sname);
         break;
       case "setdesc":
-        if (!mek.key.fromMe && !isGroupAdmins) return reply("Admin Group Only");
-        if (!isBotGroupAdmins) return reply("Bot not admin");
+        if (!mek.key.fromMe && !isGroupAdmins) return reply("Solo administrador de grupo");
+        if (!isBotGroupAdmins) return reply("Bot no administrador");
         if (!isGroup) return;
         client.groupUpdateDescription(from, `${args.join(" ")}`);
-        client.sendMessage(from, "Succes change description group", text, {
+        client.sendMessage(from, "Grupo de descripción de cambios exitosos", text, {
           quoted: mek,
         });
         break;
@@ -1559,7 +1559,7 @@ ${members > 1 ? `${members - reads.length - deliveries.length} tersisa` : ""}
       case "reminder": // by Slavyan
         if (!q)
           return reply(
-            `CONTOH PENGGUNANNYA:\n${prefix}reminder text/2s\n\nNOTE: \n*s* - seconds\n*m* - minutes\n*h* - hours\n*d* - days`
+            `EJEMPLO DE USO:\n${prefix}reminder text/2s\n\nNOTE: \n*s* - seconds\n*m* - minutes\n*h* - hours\n*d* - days`
           );
         teks = body.slice(10);
         const messRemind = teks.split("/")[0];
@@ -1582,8 +1582,7 @@ ${members > 1 ? `${members - reads.length - deliveries.length} tersisa` : ""}
           await client.sendMessage(
             from,
             `── 「 REMINDER 」 ──
-    
-Reminder berhasil diaktifkan!
+    ¡Recordatorio activado con éxito!
 ➸ Pesan: ${messRemind}
 ➸ Type: Text
 ➸ Durasi: ${parsedTime.hours} jam ${parsedTime.minutes} menit ${
@@ -1626,7 +1625,7 @@ Reminder berhasil diaktifkan!
             from,
             `── 「 REMINDER 」 ──
     
-Reminder berhasil diaktifkan!
+¡Recordatorio activado con éxito!
 ➸ Pesan: ${messRemind}
 ➸ Type: Sticker
 ➸ Durasi: ${parsedTime.hours} jam ${parsedTime.minutes} menit ${
@@ -1672,7 +1671,7 @@ Reminder berhasil diaktifkan!
             from,
             `── 「 REMINDER 」 ──
     
-Reminder berhasil diaktifkan!
+¡Recordatorio activado con éxito!
 ➸ Pesan: ${messRemind}
 ➸ Type: Image
 ➸ Durasi: ${parsedTime.hours} jam ${parsedTime.minutes} menit ${
@@ -1714,7 +1713,7 @@ Reminder berhasil diaktifkan!
             from,
             `── 「 REMINDER 」 ──
     
-Reminder berhasil diaktifkan!
+¡Recordatorio activado con éxito!
 ➸ Pesan: ${messRemind}
 ➸ Type: Audio
 ➸ Durasi: ${parsedTime.hours} jam ${parsedTime.minutes} menit ${
@@ -1896,7 +1895,7 @@ Reminder berhasil diaktifkan!
         sendButImage(
           from,
           `*Name channel*: ${b.name}\n📜 *Title*: ${a.title}\n❤️ *Like*: ${a.totalLikes}\n👎 *Dislike*: ${a.totalDislikes}\n🎞️ *Views*: ${a.totalViews}`,
-          `Silahkan pilih salah satu format yg mau didownload`,
+          `Seleccione un formato que desee descargar`,
           tamnel,
           [
             {
@@ -2831,9 +2830,9 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
                   return sendMediaURL(
                     from,
                     thumb,
-                    `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Untuk durasi lebih dari batas disajikan dalam mektuk link_`
+                    `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Para duraciones superiores al límite se presentan en el enlace mektuk_`
                   );
-                const captions = `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Size* : ${filesizeF}\n*Link* : ${a.data}\n\n_Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`;
+                const captions = `*PLAY MUSIC*\n\n*Title* : ${title}\n*Ext* : MP3\n*Size* : ${filesizeF}\n*Link* : ${a.data}\n\n_Espere a que se envíe el archivo multimedia; puede tardar unos minutos_`;
                 sendMediaURL(from, thumb, captions);
                 await sendMediaURL(from, dl_link).catch(() => reply("error"));
               });
@@ -2845,7 +2844,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
       case "video":
         if (args.length === 0)
           return reply(
-            `Kirim perintah *${prefix}video* _Judul lagu yang akan dicari_`
+            `Kirim perintah *${prefix}video* _El título de la canción que se buscará._`
           );
         var srch = args.join("");
         aramas = await yts(srch);
