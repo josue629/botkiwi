@@ -1,7 +1,7 @@
 <div align="center">
 <img src="4c.jpg" alt="YOGI" width="170" />
 
-## SELF-BOT
+## KIWI-BOT
 
 </div>
 
