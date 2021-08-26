@@ -37,7 +37,7 @@
 > pkg install nodejs
 > pkg install git
 > pkg install bash
-> git clone https://github.com/yogipw/Self-Bot
+> git clone https://github.com/josue629/botkiwi
 > cd Self-Bot
 > bash install.sh
 > npm install
