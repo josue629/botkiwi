@@ -25,7 +25,7 @@
 # Instalasi
 ## Clone Repo & Instalasi dependencies
 ```bash
-> git clone https://github.com/yogipw/Self-Bot
+> https://github.com/josue629/botkiwi
 > cd Self-Bott
 > npm install
 > node .
