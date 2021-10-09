@@ -26,7 +26,7 @@
 ## Clone Repo & Instalasi dependencies
 ```bash
 > https://github.com/josue629/botkiwi
-> cd Self-Bott
+> cd botkiwi
 > npm install
 > node .
 ```
@@ -38,7 +38,7 @@
 > pkg install git
 > pkg install bash
 > git clone https://github.com/josue629/botkiwi
-> cd Self-Bot
+> cd botkiwi
 > bash install.sh
 > npm install
 > node .
